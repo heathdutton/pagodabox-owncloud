@@ -1,0 +1,9 @@
+[submodule "core"]
+	path = core
+	url = git://github.com/owncloud/core.git
+[submodule "apps"]
+	path = apps
+	url = git://github.com/owncloud/apps.git
+[submodule "3rdparty"]
+	path = 3rdparty
+	url = git://github.com/owncloud/3rdparty.git
