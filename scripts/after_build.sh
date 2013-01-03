@@ -1,8 +1,8 @@
 # Install latest apps - Copy contents of apps submodule into the core apps folder
-rsync -avz /apps/ /core/apps
+#rsync -avz /var/www/apps/ /var/www/core/apps
 
 # Install necessary 3rd party libraries
-rsync -avz /3rdparty/ /core/3rdparty
+#rsync -avz /var/www/3rdparty/ /var/www/core/3rdparty
 
 # Create data folder so that permissions can be applied immediately
 # mkdir -m 0777 /var/www/core/data
