@@ -34,8 +34,8 @@ web1:
 # For testing...
   php_display_errors: "1"
   php_error_reporting: 30719     # equivalent to E_ALL
-  before_deploy:
-    - "scripts/before_deploy.sh"
+  after_build:
+    - "scripts/after_build.sh"
 
 # Database instances
 db1:
