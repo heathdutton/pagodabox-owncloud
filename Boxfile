@@ -31,11 +31,11 @@ web1:
     - core/data                       # shared folder for client uploads when S3 is not used
   cron:
     - "*/1 * * * *" : "php -f cron.php"     # execute cron.php every minute
-  after_build:
-    - "scripts/after_build.sh"
 # For testing...
   php_display_errors: "1"
   php_error_reporting: 30719     # equivalent to E_ALL
+  before_deploy:
+    - "scripts/before_deploy.sh"
 
 # Database instances
 db1:
