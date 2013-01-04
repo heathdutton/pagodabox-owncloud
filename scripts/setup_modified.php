@@ -17,9 +17,9 @@ if(isset($_POST['install']) && $_POST['install']=='true') {
 
     // Ensure "Satisfy Any" is in the .htaccess
     $htaccess = file_get_contents('.htaccess');
-    var_dump($htaccess);
-    $key = "\nSatisfy Any\n";
+    $key = "Satisfy Any\nAllow from all\n";
     if (!strpos($htaccess, $key)){
+        var_dump($htaccess);
         $htaccess .= $key;
         file_put_contents('.htaccess', $htaccess);
     }
