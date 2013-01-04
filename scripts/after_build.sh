@@ -14,11 +14,8 @@ cp -f /var/www/core/lib/setup.php /var/www/scripts/setup_original.php
 cp -f /var/www/scripts/setup_modified.php /var/www/core/lib/setup.php
 cp -f /var/www/scripts/templates/installation.php /var/www/core/core/templates/installation.php
 
-echo "Setting folder permissions."
-chown -R www-data:www-data /var/www/core/config /var/www/core/data
-chown www-data:www-data /var/www/core/apps
-chmod 750 /var/www/core/apps /var/www/core/config
-chmod -R 770 /var/www/core/data
+echo "Modifying .htaccess"
+echo $'\nSatisfy Any\n' >> /var/www/core/.htaccess
 
 echo "Cleaning up Git submodules."
 rm -rf -- /var/www/apps
