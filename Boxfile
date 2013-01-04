@@ -16,7 +16,6 @@ web1:
     - curl
     - pdo
     - pdo_mysql
-    - mod_auth_basic                    # attempt to resolve issues with initial login/auth
   # ownCloud appears to have support for caching layers, but I have not confirmed this via documentation
     - memcached
     - apc
