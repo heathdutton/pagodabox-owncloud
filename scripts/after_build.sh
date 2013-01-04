@@ -15,7 +15,7 @@ cp -f /var/www/scripts/setup_modified.php /var/www/core/lib/setup.php
 cp -f /var/www/scripts/templates/installation.php /var/www/core/core/templates/installation.php
 
 echo "Modifying .htaccess to prevent issues with Basic Auth."
-echo $'\nSatisfy Any\nAllow from all\n' >> /var/www/core/.htaccess
+cp -f /var/www/scripts/htaccess_override /var/www/core/.htaccess
 
 echo "Cleaning up Git submodules."
 rm -rf -- /var/www/apps
