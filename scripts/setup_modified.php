@@ -15,14 +15,7 @@ if(isset($_POST['install']) && $_POST['install']=='true') {
     // Merge post with our overriding defaults
     $_POST = array_merge($_POST, $overriding_defaults);
 
-    // Ensure "Satisfy Any" is in the .htaccess
-    $htaccess = file_get_contents('.htaccess');
-    $key = "Satisfy Any\nAllow from all\n";
-    if (!strpos($htaccess, $key)){
-        var_dump($htaccess);
-        $htaccess .= $key;
-        file_put_contents('.htaccess', $htaccess);
-    }
+    die(phpinfo());
 }
 
 // Then include the normal setup file (this file was coppied into this location, but has not been modified)
