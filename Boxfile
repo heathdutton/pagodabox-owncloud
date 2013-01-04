@@ -28,7 +28,6 @@ web1:
   php_display_errors: "1"
   php_error_reporting: 30719            # equivalent to E_ALL
   shared_writable_dirs:
-    - core
     - core/apps
     - core/config                       # config.php is generated and dropped here
     - core/data                         # shared folder for client uploads when S3 is not used
