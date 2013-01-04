@@ -4,7 +4,7 @@
 web1:
   name: core
   document_root: core
-  php_version: 5.3.10             # Versions available: 5.2.17, 5.3.5, 5.3.6, 5.3.8, 5.3.10
+  php_version: 5.3.10                   # Versions available: 5.2.17, 5.3.5, 5.3.6, 5.3.8, 5.3.10
   php_extensions:
     - json
     - xml
@@ -16,22 +16,23 @@ web1:
     - curl
     - pdo
     - pdo_mysql
-    - memcached                  # Some internal code supports memcached, configuration needs to be made to use it
-    - apc                        # ownCloud has an apc adaptor
+  # ownCloud appears to have support for caching layers, but I have not confirmed this via documentation
+    - memcached
+    - apc
   php_max_execution_time: 10000
   php_max_file_uploads: 20
   php_file_uploads: "1"
-  php_post_max_size: "2G"
-  php_upload_max_filesize: "2G"
+  php_post_max_size: "1.95G"
+  php_upload_max_filesize: "1.9G"
 # For testing...
   php_display_errors: "1"
-  php_error_reporting: 30719     # equivalent to E_ALL
+  php_error_reporting: 30719            # equivalent to E_ALL
   shared_writable_dirs:
     - core/apps
-    - core/config                     # config.php is generated and dropped here
-    - core/data                       # shared folder for client uploads when S3 is not used
+    - core/config                       # config.php is generated and dropped here
+    - core/data                         # shared folder for client uploads when S3 is not used
   cron:
-    - "*/1 * * * *" : "php -f cron.php"     # execute cron.php every minute
+    - "*/1 * * * *" : "php -f cron.php" # execute cron.php every minute
   after_build:
     - "bash scripts/after_build.sh"
 
@@ -40,7 +41,7 @@ db1:
   name: core
   type: mysql
 
-# Memcache instances
+# Memcached instances
 cache1:
   name: core
   type: memcached
