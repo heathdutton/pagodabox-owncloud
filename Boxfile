@@ -16,6 +16,7 @@ web1:
     - curl
     - pdo
     - pdo_mysql
+    - iconv
   # ownCloud appears to have support for caching layers, but I have not confirmed this via documentation
     - memcached
     - apc
