@@ -1,3 +1,4 @@
 Allow from all
 AuthType none
 Satisfy Any
+AuthBasicAuthoritative Off

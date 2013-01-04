@@ -15,7 +15,7 @@ cp -f /var/www/scripts/setup_modified.php /var/www/core/lib/setup.php
 cp -f /var/www/scripts/templates/installation.php /var/www/core/core/templates/installation.php
 
 echo "Modifying .htaccess to prevent issues with Basic Auth."
-echo $'\nAllow from all\nAuthType none\nSatisfy Any\n' >> /var/www/core/.htaccess
+echo $'\nAllow from all\nAuthType none\nSatisfy Any\nAuthBasicAuthoritative Off\n' >> /var/www/core/.htaccess
 # Order Deny, Allow\n
 
 echo "Cleaning up Git submodules."
