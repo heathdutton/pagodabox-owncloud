@@ -34,7 +34,7 @@ web1:
     - core/data                         # shared folder for client uploads when S3 is not used
   cron:
     - "*/1 * * * *" : "php -f cron.php" # execute cron.php every minute
-  after_build:
+  after_deploy:
     - "bash scripts/after_build.sh"
 
 # Database instances
