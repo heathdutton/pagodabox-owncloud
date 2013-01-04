@@ -1,4 +1,0 @@
-<Directory "/var/www/core">
-    Satisfy Any
-    Allow from all
-</Directory>
