@@ -3,14 +3,10 @@
 echo "after_build.sh running."
 
 echo "Installing latest official app files."
-rsync -avz /var/www/apps/ /var/www/core/apps
+rsync -aHz /var/www/apps/ /var/www/core/apps
 
 echo "Installing necessary 3rd party library files"
-mkdir -m 0644 /var/www/core/3rdparty
-rsync -avz /var/www/3rdparty/ /var/www/core/3rdparty
-
-# echo "Creating data folder"
-# mkdir -m 0777 /var/www/core/data
+rsync -aHz /var/www/3rdparty /var/www/core
 
 echo "Altering ownCloud installation files to work with Pagoda Box"
 cp -f /var/www/core/lib/setup.php /var/www/scripts/setup_original.php
