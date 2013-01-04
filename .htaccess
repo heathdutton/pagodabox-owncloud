@@ -2,4 +2,3 @@ Allow from all
 AuthType none
 Satisfy Any
 AuthBasicAuthoritative off
-GroupExternalAuthoritative off
