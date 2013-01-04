@@ -25,6 +25,9 @@ web1:
   php_file_uploads: "1"
   php_post_max_size: "1.95G"
   php_upload_max_filesize: "1.9G"
+# For testing...
+  php_display_errors: "1"
+  php_error_reporting: 30719            # equivalent to E_ALL
   shared_writable_dirs:
     - core/apps
     - core/config                       # config.php is generated and dropped here
