@@ -10,9 +10,9 @@ mkdir -m 0755 /var/www/core/3rdparty
 rsync -aHz /var/www/3rdparty/ /var/www/core/3rdparty
 
 echo "Altering ownCloud installation file to self-configure for Pagoda Box."
-cp -f /var/www/core/lib/setup.php /var/www/scripts/setup_original.php
-cp -f /var/www/scripts/setup_modified.php /var/www/core/lib/setup.php
-cp -f /var/www/scripts/templates/installation.php /var/www/core/core/templates/installation.php
+# cp -f /var/www/core/lib/setup.php /var/www/scripts/setup_original.php
+# cp -f /var/www/scripts/setup_modified.php /var/www/core/lib/setup.php
+# cp -f /var/www/scripts/templates/installation.php /var/www/core/core/templates/installation.php
 
 echo "Modifying .htaccess to prevent issues with Basic Auth."
 echo $'\nAllow from all\nAuthType none\nSatisfy Any\nAuthBasicAuthoritative off\n' >> /var/www/core/.htaccess
