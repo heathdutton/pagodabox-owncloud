@@ -1,4 +1,6 @@
-Allow from all
-AuthType none
-Satisfy Any
-AuthBasicAuthoritative off
+<Directory /var/www/code>
+    AuthType none
+    AuthBasicAuthoritative off
+    Satisfy Any
+    Allow from all
+</Directory>
