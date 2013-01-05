@@ -19,7 +19,7 @@
 	</ul>
 	<?php endif; ?>
 	<?php if(!$_['secureRNG']): ?>
-	<fieldset class="warning">
+	<fieldset style="color: #B94A48; background-color: #F2DEDE; border-color: #EED3D7; border-style:solid; border-radius: 5px; border-width:1px; padding:0.5em;">
 		<legend><strong><?php echo $l->t('Security Warning');?></strong></legend>
 		<span><?php echo $l->t('No secure random number generator is available, please enable the PHP OpenSSL extension.');?></span>
 		<br/>
@@ -27,23 +27,22 @@
 	</fieldset>
 	<?php endif; ?>
 	<?php if(!$_['htaccessWorking']): ?>
-	<fieldset class="warning">
+	<fieldset style="color: #B94A48; background-color: #F2DEDE; border-color: #EED3D7; border-style:solid; border-radius: 5px; border-width:1px; padding:0.5em;">
 		<legend><strong><?php echo $l->t('Security Warning');?></strong></legend>
 		<span><?php echo $l->t('Your data directory and your files are probably accessible from the internet. The .htaccess file that ownCloud provides is not working. We strongly suggest that you configure your webserver in a way that the data directory is no longer accessible or you move the data directory outside the webserver document root.');?></span>
 	</fieldset>
 	<?php endif; ?>
-	<fieldset id="adminaccount">
+	<fieldset>
 		<legend><?php echo $l->t( 'Create an <strong>admin account</strong>' ); ?></legend>
-		<p class="infield grouptop">
-			<input type="text" name="adminlogin" id="adminlogin" value="<?php print OC_Helper::init_var('adminlogin'); ?>" autocomplete="off" autofocus required />
+		<p class="infield">
 			<label for="adminlogin" class="infield"><?php echo $l->t( 'Username' ); ?></label>
-			<img class="svg" src="<?php echo image_path('', 'actions/user.svg'); ?>" alt="" />
+			<input type="text" name="adminlogin" id="adminlogin" value="<?php print OC_Helper::init_var('adminlogin'); ?>" autocomplete="off" autofocus required />
 		</p>
-		<p class="infield groupbottom">
-			<input type="password" name="adminpass" id="adminpass" value="<?php print OC_Helper::init_var('adminpass'); ?>" required />
+		<p class="infield">
 			<label for="adminpass" class="infield"><?php echo $l->t( 'Password' ); ?></label>
-			<img class="svg" src="<?php echo image_path('', 'actions/password.svg'); ?>" alt="" />
+			<input type="password" name="adminpass" id="adminpass" value="<?php print OC_Helper::init_var('adminpass'); ?>" required />
 		</p>
 	</fieldset>
-	<div class="buttons"><input type="submit" class="primary" value="<?php echo $l->t( 'Finish setup' ); ?>" /></div>
+
+	<div class="buttons"><input type="submit" value="<?php echo $l->t( 'Finish setup' ); ?>" /></div>
 </form>
