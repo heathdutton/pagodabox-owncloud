@@ -6,7 +6,7 @@ echo "Installing latest official app files. This may take a minute."
 rsync -aHz /var/www/apps/ /var/www/core/apps
 
 echo "Installing necessary 3rd party library files."
-mkdir -m 0755 /var/www/core/3rdparty
+# mkdir -m 0755 /var/www/core/3rdparty
 rsync -aHz /var/www/3rdparty/ /var/www/core/3rdparty
 
 echo "Altering ownCloud installation file to self-configure for Pagoda Box."
