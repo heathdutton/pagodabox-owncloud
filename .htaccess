@@ -1,4 +1,4 @@
-<Directory /var/www/code>
+<Directory /code>
     AuthType none
     AuthBasicAuthoritative off
     Satisfy Any
