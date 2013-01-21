@@ -1,6 +1,5 @@
-<Directory /code>
-    AuthType none
-    AuthBasicAuthoritative off
-    Satisfy Any
-    Allow from all
-</Directory>
+# Prevent basic auth below this directory
+AuthType none
+AuthBasicAuthoritative off
+Satisfy Any
+Allow from all
