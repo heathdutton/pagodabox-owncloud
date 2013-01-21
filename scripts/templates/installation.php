@@ -1,3 +1,4 @@
+<? die('-'.getcwd().'-'); ?>
 <input type='hidden' id='hasMySQL' value='<?php echo $_['hasMySQL'] ?>'></input>
 <input type='hidden' id='hasSQLite' value='<?php echo $_['hasSQLite'] ?>'></input>
 <input type='hidden' id='hasPostgreSQL' value='<?php echo $_['hasPostgreSQL'] ?>'></input>
